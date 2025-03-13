@@ -1,7 +1,7 @@
 import './Person.css';
 
 export const Person = ({ person }) => {
-  const { name, age, isMarried, sex, partnerName } = person;
+  const { name, age = 0, isMarried = false, sex, partnerName = null } = person;
   const spouseType = sex === 'm' ? 'wife' : 'husband';
   const married = (
     <p className="Person__partner">
